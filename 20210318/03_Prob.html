@@ -10,9 +10,9 @@
 
 <body>
     <script>
-        const Input1 = prompt('숫자1을 입력해라')
+        const Input1 = prompt('x축 수를 입력해라')
         const point1 = Input1
-        const Input2 = prompt('숫자2를 입력해라')
+        const Input2 = prompt('y축 수를 입력해라')
         const point2 = Input2
 
         if (Input1 > 0 && Input2 > 0) {
@@ -21,6 +21,14 @@
             console.log('2')
         } else if (Input1 < 0 && Input2 < 0) {
             console.log('3')
+        } else if (Input1 == 0 && Input2 > 0) {
+            consolt.log('양의 Y축 위에 있다')
+        } else if (Input1 > 0 && Input2 == 0) {
+            consolt.log('양의 X축 위에 있다')
+        } else if (Input1 == 0 && Input2 < 0) {
+            consolt.log('음의 Y축 위에 있다')
+        } else if (Input1 < 0 && Input2 == 0) {
+            consolt.log('음의 X축 위에 있다')
         } else {
             console.log('4')
         }
