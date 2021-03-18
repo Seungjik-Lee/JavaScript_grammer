@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const input = prompt('메세지를 입력하세요', '기본값')
+        // alert(input)
+
+
+//----------------------------------------------------------------------
+        //문제
+        
+        var input1 = prompt(('숫자1', ' '));
+        var input2 = prompt('숫자2', ' ');
+
+        var output_a = input1 * (input2[2]);
+        var output_b = input1 * (input2[1]);
+        var output_c = input1 * (input2[0]);
+        var output_d = input1 * (input2);
+       
+        console.log(output_a)
+        console.log(output_b)
+        console.log(output_c)
+        console.log(output_d)
+        
+        //-------------------------------------------------
+        
+        var input1 = prompt(('숫자1', ' '));
+        var input2 = prompt('숫자2', ' ');
+
+        var output_a = input1 * (input2[2]);
+        var output_b = input1 * (input2[1]);
+        var output_c = input1 * (input2[0]);
+        var output_d = input1 * (input2);
+
+        //숫자로 본다면
+        console.log(input1 * (input2%10))
+        console.log(input1 * ((parseInt(input2/10))%10))
+        console.log(input1 * (parseInt(input2/100)))
+        
+
+    </script>
+</body>
+</html>
