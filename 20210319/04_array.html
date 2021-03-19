@@ -51,6 +51,15 @@
         const index = array.indexOf("AI빅데이터반")
         array.splice(index, 1)
         console.log(array)
+
+
+        //특정 위치에 값 추가하기
+        //1. 위에서 봤던 것처럼 인덱스 적고 바로 값 넣으면 됨
+        //2. splice 이용
+
+        //현재 array에는 3,4,5만 들어가 있는데, 3과 4사이에 값을 넣고 싶을때
+        array.splice(1,0,"3.5") //1번째에 "3.5"를 추가함
+        console.log(array)
     </script>
 </body>
 
