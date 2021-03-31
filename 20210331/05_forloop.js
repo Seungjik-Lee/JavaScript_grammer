@@ -3,3 +3,8 @@ for (const i in todos) {
     // console.log(i + "번째 할 일 : " + todos[i])
     console.log(`${(Number(i)+1)}번째 할 일 : ${todos[i]}`)
 }
+
+for (const work of todos)
+{
+    console.log(work)
+}
