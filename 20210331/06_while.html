@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (confirm('계속할까?'))
+            alert('....')
+        alert('while문 빠져나감')
+
+        let count = 0;
+        while (count < 5) {
+            alert('하이')
+            alert((Number(count) + 1) + '번째 선택받은 아이')
+            count++
+        }
+        alert((Number(count) + 1) + '번째는 선택받은 아이가 아니여')
+
+        // while문을 for문으로 변경
+        for (let count = 0; count < 5; count++) {
+            alert('하이')
+            alert((Number(count) + 1) + '번째 선택받은 아이')
+        }
+        alert((Number(count) + 1) + '번째는 선택받은 아이가 아니여')
+    </script>
+</body>
+
+</html>
