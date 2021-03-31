@@ -28,13 +28,18 @@
 
         alert('continue')
         let sum = 0;
+        let sum2 = 0;
         for (let i = 0; i < 101; i++) {
             if (i % 2 == 0)
                 continue;
             else
                 sum += i;
+
+            if (i % 2 != 0)
+                sum2 += i
         }
         alert(sum)
+        alert(sum2)
     </script>
 </body>
 
