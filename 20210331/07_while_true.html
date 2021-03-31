@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //보통 while문 쓰는 방법
+        //break문 이용
+        let count = 0;
+        while (true) {
+            count++;
+            if (count > 100)
+                break;
+        }
+        alert(count)
+        //break 안 쓰고 할 경우
+        count = 0;
+        while (count < 100) {
+            count++;
+            console.log(count)
+        }
+    </script>
+</body>
+
+</html>
