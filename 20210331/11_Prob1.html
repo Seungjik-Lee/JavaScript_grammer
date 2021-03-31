@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = []
+        for (let i = 0; i < 5; i++)
+            input[i] = prompt((Number(i) + 1) + "번째 값은?")
+        let min = input[0]
+        let max = input[0]
+
+        for (let i = 0; i < input.length; i++) {
+            if (Number(min) > input[i])
+                min = input[i]
+            if (Number(max) < input[i])
+                max = input[i]
+        }
+        alert(`최솟값 : ${min}`)
+        alert(`최댓값 : ${max}`)
+    </script>
+</body>
+
+</html>
