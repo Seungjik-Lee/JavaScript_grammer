@@ -3,7 +3,7 @@ for (let i = 0; i < 20; i++) {
     console.log((i + 1) + "번째 : " + start)
     let end = ""; //누적값
     let number = start.charAt(0); //몇 개인지 구해야 하는 숫자
-    let count = 0;
+    let count = 0; //읽은 숫자의 개수
     for (let j = 0; j < start.length; j++) {
         if (number != start.charAt(j)) {
             end = end + number + count;
