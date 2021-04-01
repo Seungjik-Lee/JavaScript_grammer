@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <input id="one" type="text"> +
+    <input id="one" type="text">
     <input id="two" type="text"> =
     <span id="result">결과가 여기 나옴</span>
 
     <div>
-        <input value="+" type="button" onclick="sum()">
-    </div>
-
-    <input id="one" type="text"> -
-    <input id="two" type="text"> =
-    <span id="result1">결과가 여기 나옴</span>
-
-    <div>
-        <input value="-" type="button" onclick="sub()">
-    </div>
-
-    <input id="one" type="text"> *
-    <input id="two" type="text"> =
-    <span id="result2">결과가 여기 나옴</span>
-
-    <div>
-        <input value="*" type="button" onclick="mul()">
-    </div>
-
-    <input id="one" type="text"> /
-    <input id="two" type="text"> =
-    <span id="result3">결과가 여기 나옴</span>
-
-    <div>
-        <input value="/" type="button" onclick="div()">
+        <input value="+" type="button" onclick="calc('+')">
+        <input value="-" type="button" onclick="calc('-')">
+        <input value="*" type="button" onclick="calc('*')">
+        <input value="/" type="button" onclick="calc('/')">
     </div>
 
     <script>
-        function sum()
-        {
+        function calc(num) {
             let one = document.getElementById('one').value
             let two = document.getElementById('two').value
-            let sum = Number(one)+Number(two)
+            let result = ''
+            switch (num) {
+                case '+':
+                    result = Number(one) + Number(two)
+                    break;
+                case '-':
+                    result = Number(one) - Number(two)
+                    break;
+                case '*':
+                    result = Number(one) * Number(two)
+                    break;
+                case '/':
+                    result = Number(one) / Number(two)
+                    break;
+                default:
+                    arguments("!?")
+                    result = "!?"
+                    break;
+            }
             document.getElementById('result').innerText
-            = sum;
-        }
-
-        function sub()
-        {
-            let one = document.getElementById('one').value
-            let two = document.getElementById('two').value
-            let sub = Number(one)-Number(two)
-            document.getElementById('result1').innerText
-            = sub;
-        }
-
-        function mul()
-        {
-            let one = document.getElementById('one').value
-            let two = document.getElementById('two').value
-            let mul = Number(one)*Number(two)
-            document.getElementById('result2').innerText
-            = mul;
-        }
-
-        function div()
-        {
-            let one = document.getElementById('one').value
-            let two = document.getElementById('two').value
-            let div = Number(one)/Number(two)
-            document.getElementById('result').innerText
-            = div;
+            = result;
         }
     </script>
 </body>
+
 </html>
