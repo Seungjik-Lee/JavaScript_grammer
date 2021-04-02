@@ -1,0 +1,104 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+
+  <body>
+      <button id="scissors" onclick="start('가위')">가위</button>
+      <button id="rock" onclick="start('바위')">바위</button>
+      <button id="paper" onclick="start('보')">보</button>
+      <div></div>
+      나<img id="myResult">
+      컴퓨터<img id="computerResult">
+
+      <h1 id="gameResult"></h1>
+      <script>
+          function start(mine) {
+              const RockScissorsPaper = ['가위', '바위', '보']
+              const computer = RockScissorsPaper[Math.floor(Math.random() * 3)] //0,1,2
+              console.log("나:" + mine)
+              console.log("컴퓨터:" + computer)
+              let myResult = document.getElementById('myResult')
+              let computerResult = document.getElementById('computerResult')
+              let gameResult = document.getElementById('gameResult')
+
+              switch (mine) {
+                  case '가위':
+                      myResult.src = '가위.jpg'
+                      switch (computer) {
+                          case '가위':
+                              console.log(mine + computer + "draw")
+                              gameResult.innerText = 'draw'
+                              computerResult.src = '가위.jpg'
+                              break;
+
+                          case '바위':
+                              console.log(mine + computer + "Loose")
+                              gameResult.innerText = 'Loose'
+                              computerResult.src = '바위.jpg'
+                              break;
+
+                          case '보':
+                              console.log(mine + computer + "Win")
+                              gameResult.innerText = 'Win'
+                              computerResult.src = '보.jpg'
+                              break;
+                      }
+                      break;
+
+                  case '바위':
+                      myResult.src = '바위.jpg'
+                      switch (computer) {
+                          case '가위':
+                              console.log(mine + computer + "Win")
+                              gameResult.innerText = 'Win'
+                              computerResult.src = '가위.jpg'
+                              break;
+
+                          case '바위':
+                              console.log(mine + computer + "Draw")
+                              gameResult.innerText = 'draw'
+                              computerResult.src = '바위.jpg'
+                              break;
+
+                          case '보':
+                              console.log(mine + computer + "Loose")
+                              gameResult.innerText = 'Loose'
+                              computerResult.src = '보.jpg'
+                              break;
+                      }
+                      break;
+
+                  case '보':
+                      myResult.src = '보.jpg'
+                      switch (computer) {
+                          case '가위':
+                              console.log(mine + computer + "Loose")
+                              gameResult.innerText = 'Loose'
+                              computerResult.src = '가위.jpg'
+                              break;
+
+                          case '바위':
+                              console.log(mine + computer + "Win")
+                              gameResult.innerText = 'Win'
+                              computerResult.src = '바위.jpg'
+                              break;
+
+                          case '보':
+                              console.log(mine + computer + "Draw")
+                              gameResult.innerText = 'draw'
+                              computerResult.src = '보.jpg'
+                              break;
+                    }
+                    break;
+                }
+            }
+      </script>
+  </body>
+
+  </html>
