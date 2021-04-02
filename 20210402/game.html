@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='scissors' onclick="start('가위')">가위</button>
+    <button id='rock' onclick="start('바위')">바위</button>
+    <button id='paper' onclick="start('보')">보</button>
+    <!-- //start('가위') //내가 가위를 낸 경우
+    //start('바위') //내가 바위를 낸 경우
+    //start('보') //내가 보를 낸 경우 -->
+
+    <div></div>
+    <!--줄 구분하기 위한 태그-->
+
+    나 <img id="myresult">
+    컴퓨터 <img id="computerresult">
+    <h1 id="result">결과</h1>
+
+    <script>
+        function start(mine) {
+            const RockScissorPaper = ['가위', '바위', '보']
+            const computer = RockScissorPaper[Math.floor(Math.random() * 3)]
+            console.log("나 : " + mine)
+            console.log("컴퓨터 : " + computer)
+            let myresult = document.getElementById('myresult')
+            let computerresult = document.getElementById('computerresult')
+            let result = document.getElementById('result')
+        }
+
+        switch (mine) {
+            case '가위':
+                myresult.src = '가위.jpg'
+                switch (computer) {
+                    case '가위':
+                        console.log('비김')
+                        computerresult.src = '가위.jpg'
+                        result.innertext = '비김'
+                        break;
+
+                    case '바위':
+                        console.log('짐')
+                        computerresult.src = '바위.jpg'
+                        result.innertext = '짐'
+                        break;
+
+                    case '보':
+                        console.log('이김')
+                        computerresult.src = '보.jpg'
+                        result.innertext = '이김'
+                        break;
+                }
+                break;
+            case '바위':
+                myresult.src = '바위.jpg'
+                switch (computer) {
+                    case '가위':
+                        console.log('이김')
+                        computerresult.src = '가위.jpg'
+                        result.innertext = '이김'
+                        break;
+
+                    case '바위':
+                        console.log('비김')
+                        computerresult.src = '바위.jpg'
+                        result.innertext = '비김'
+                        break;
+
+                    case '보':
+                        console.log('짐')
+                        computerresult.src = '보.jpg'
+                        result.innertext = '짐'
+                        break;
+                }
+                break;
+            case '보':
+                myresult.src = '보.jpg'
+                switch (computer) {
+                    case '가위':
+                        console.log('짐')
+                        computerresult.src = '가위.jpg'
+                        result.innertext = '짐'
+                        break;
+
+                    case '바위':
+                        console.log('이김')
+                        computerresult.src = '바위.jpg'
+                        result.innertext = '이김'
+                        break;
+
+                    case '보':
+                        console.log('비김')
+                        computerresult.src = '보.jpg'
+                        result.innertext = '비김'
+                        break;
+                }
+                break;
+        }
+    </script>
+    <!-- <script>
+        function practice() {
+            const mine = prompt("game")
+            const computer = Math.floor(Math.random() * 3) //0, 1, 2 중 하나
+            const game = ["가위", "바위", "보"]
+            console.log("나 : " + mine)
+            console.log("컴퓨터 : " + game[computer])
+        }
+        practice()
+    </script> -->
+</body>
+
+</html>

@@ -9,14 +9,14 @@
   </head>
 
   <body>
-      <button id="scissors" onclick="start('가위')">가위</button>
-      <button id="rock" onclick="start('바위')">바위</button>
-      <button id="paper" onclick="start('보')">보</button>
+      <button id="scissors">가위</button>
+      <button id="rock">바위</button>
+      <button id="paper">보</button>
       <div></div>
       나<img id="myResult">
       컴퓨터<img id="computerResult">
-
       <h1 id="gameResult"></h1>
+
       <script>
           function start(mine) {
               const RockScissorsPaper = ['가위', '바위', '보']
@@ -94,10 +94,16 @@
                               gameResult.innerText = 'draw'
                               computerResult.src = '보.jpg'
                               break;
-                    }
-                    break;
-                }
-            }
+                      }
+                      break;
+              }
+          }
+      </script>
+
+      <script>
+          let scissors = document.querySelector('#scissors')
+          let rock = document.querySelector('#rock')
+          let paper = document.querySelector('#paper')
       </script>
   </body>
 

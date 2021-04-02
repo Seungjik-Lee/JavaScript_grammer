@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id='one'>1 번째</h1>
+    <h1 id='two'>2 번째</h1>
+    <h1 id='three'>3 번째</h1>
+    <img id='image'>
+
+    <script>
+        function welcome()
+        {
+            alert("하이")
+            let image = document.querySelector('image')
+            const src = `http://placekitten.com/250/250`
+            image.setAttribute('src', src)
+        }
+        //화면이 불러와지자 마자 수행하는 것
+        document.addEventListener('DOMContentLoaded', welcome)
+
+        let one = document.querySelector('#one')
+        one.addEventListener('click',
+        (event) =>
+        {
+            one.style.color = "red"
+        })
+
+        let two = document.querySelector('#two')
+        two.addEventListener('click',
+        (event) =>
+        {
+            two.style.backgroundColor = "purple"
+        })
+
+        let three = document.querySelector('#three')
+        three.onclick = function() {three.style.color = 'blue'}
+        //three.onclick =
+        //() =>
+        //{
+        //    three.style.backgroundColor = "blue"
+        //})
+    </script>
+</body>
+</html>
