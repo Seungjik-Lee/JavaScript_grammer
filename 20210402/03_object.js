@@ -36,3 +36,30 @@ console.log(student_idj.직업)
 delete student_idj.hakbeon
 
 console.log(student_idj)
+
+const 한빛 = {
+    name: '혼자 공부하는 파이썬',
+    price: 18000,
+    publisher: '한빛미디어'
+}
+console.log("한빛 미디어 책 : " + 한빛.name)
+
+let 대환장파티 = {
+    배열: [() => {
+        console.log('ㅋㅋㅋ루삥뽕')
+    }, student_idj, [1, 3, 4], {
+        이름: '이승직',
+        나이: 26
+    }]
+}
+console.log(대환장파티)
+
+//Math 객체 (js에서 제공해주는 객체. Number 객체 등등도 있느나 생략)
+const num = Math.random()
+
+console.log('0 이상 1 미만')
+console.log(num)
+
+console.log('랜덤 숫자 정수')
+console.log('-5부터 5 사이의 값')
+console.log(Math.floor(num * 10 - 5))
