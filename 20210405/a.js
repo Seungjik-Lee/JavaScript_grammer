@@ -10,3 +10,7 @@ class AA {
         alert('doB')
     }
 }
+
+class AAB extends AA {
+
+}
