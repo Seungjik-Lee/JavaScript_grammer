@@ -20,20 +20,31 @@
             constructor(props) {
                 super(props)
                 this.state = {
-                    count : 0
+                    count : 0,
+                    text : 'a'
                 }
                 this.countUp = this.countUp.bind(this)
+                this.textUp = this.textUp.bind(this)
+            }
+
+            textUp(event){
+                this.setState({
+                    myt : this.state.myt + 'my'
+                })
             }
 
             countUp(event){
                 this.setState({
-                    count : this.state.count+1
+                    count : this.state.count+1,
+                    text : this.state.text + 'a'
                 })
             }
             render() {
                 return <div>
-                    <h1>클릭한 횟수 : {this.state.count}</h1>
+                    <h1>클릭한 횟수 : {this.state.count}{this.state.text}</h1>
+                    <h1>myt{this.state.myt}</h1>
                     <button onClick={this.countUp}>클릭</button>
+                    <button onClick={this.textUp}>클릭</button>
                 </div>
             }
         }
