@@ -1,0 +1,3 @@
+function doA(){
+    alert('test');
+}
